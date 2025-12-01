@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfbf2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.navigationFragments.NewEntryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayout"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Name"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headRadioGroup"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutName"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Head of the Family: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvOfHeadRadioGroup"
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/headRadioGroupYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textSize="15sp"
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/headRadioGroupNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="15sp"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the head"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headRadioGroup"
+            android:visibility="gone"
+            android:id="@+id/tvErrorHead"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutRelationshipWithHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorHead"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Relationship with head"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRelationshipWithHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutAadhar"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            android:layout_marginVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutRelationshipWithHead">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aadhar Number"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvAadharNo"
+                />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAadharDigits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/etAadharDigit1"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit2"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit3"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit4"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+                <EditText
+                    android:id="@+id/etAadharDigit5"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit6"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit7"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit8"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+                <EditText
+                    android:id="@+id/etAadharDigit9"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit10"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit11"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+                <EditText
+                    android:id="@+id/etAadharDigit12"
+                    android:layout_width="26dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:maxLength="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please fill valid aadhar number"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutAadhar"
+            android:visibility="gone"
+            android:id="@+id/tvErrorAadhar"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/genderRadioGroup"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            android:layout_marginVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorAadhar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender: "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvOfGenderRadioGroup"
+                />
+            <RadioButton
+                android:id="@+id/genderRadioGroupMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+            <RadioButton
+                android:id="@+id/genderRadioGroupFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                />
+            <RadioButton
+                android:id="@+id/genderRadioGroupOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the gender"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+            android:visibility="gone"
+            android:id="@+id/tvErrorGender"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFathersName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderRadioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Father's Name"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFathersName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutReligion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            android:layout_marginBottom="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutFathersName"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraintLayoutReligion"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutReligion"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutReligion"
+                android:text="Religion:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvReligion"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvReligion"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutReligion"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutReligion"
+                android:layout_marginLeft="20sp"
+                android:paddingVertical="5sp"
+                android:paddingEnd="20sp"
+                android:entries="@array/religion_array"
+                android:contentDescription="Select Religion"
+                android:background="@drawable/rectangular_border"
+                android:id="@+id/spinnerReligion"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerReligion"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutReligion"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutReligion"
+                android:paddingStart="20sp"
+                android:id="@+id/imageViewReligion"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutCaste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            android:layout_marginVertical="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutReligion"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraintLayoutCaste"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutCaste"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutCaste"
+                android:text="Caste:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvCaste"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvCaste"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutCaste"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutCaste"
+                android:layout_marginLeft="20sp"
+                android:paddingEnd="20sp"
+                android:paddingVertical="5sp"
+                android:entries="@array/castes_array"
+                android:contentDescription="Select Caste"
+                android:background="@drawable/rectangular_border"
+                android:id="@+id/spinnerCaste"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerCaste"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutCaste"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutCaste"
+                android:paddingStart="20sp"
+                android:id="@+id/imageViewCaste"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/literacyStatusRadioGroup"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            android:layout_marginTop="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutCaste"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Literacy Status"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvOfLiteracyStatusRadioGroup"
+                />
+            <RadioButton
+                android:id="@+id/literacyStatusRadioGroupLiterate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Literate"
+                />
+            <RadioButton
+                android:id="@+id/literacyStatusRadioGroupIlliterate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Illiterate"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the literacy status"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+            android:visibility="gone"
+            android:id="@+id/tvErrorLiteracyStatus"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutLastClassStudied"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/literacyStatusRadioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Last class studied"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastClassStudied"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutLastClassStudied"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="5sp"
+            android:id="@+id/constraintLayoutMaritalStatus"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marital Status: "
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutMaritalStatus"
+                app:layout_constraintStart_toStartOf="@id/constraintLayoutMaritalStatus"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingStart="5sp"
+                android:id="@+id/tvMaritalStatus"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvMaritalStatus"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutMaritalStatus"
+                android:layout_marginLeft="20sp"
+                android:paddingVertical="5sp"
+                android:paddingEnd="20sp"
+                android:entries="@array/marital_status_array"
+                android:contentDescription="Select Marital Status"
+                android:background="@drawable/rectangular_border"
+                android:id="@+id/spinnerMaritalStatus"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMaritalStatus"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutMaritalStatus"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutMaritalStatus"
+                android:paddingStart="20sp"
+                android:id="@+id/imageViewMaritalStatus"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the marital status"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup"
+            android:visibility="gone"
+            android:id="@+id/tvErrorMaritalStatus"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAgeAtMarriage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutMaritalStatus"
+            android:hint="Age at marriage"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAgeAtMarriage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutMotherTongue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutAgeAtMarriage"
+            android:hint="Mother Tongue"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMotherTongue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutOtherLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutMotherTongue"
+            android:hint="Other Languages known"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOtherLanguages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/layoutOtherLanguages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginVertical="5sp"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayoutDatePicker"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOB"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvDOB"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraintLayoutDatePicker"
+                android:layout_marginHorizontal="30sp"
+                android:paddingHorizontal="10sp"
+                android:background="@drawable/rectangular_border"
+                >
+
+                <TextView
+                    android:id="@+id/tvDatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayoutDatePicker"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayoutDatePicker"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutDatePicker"
+                    android:paddingHorizontal="20sp"
+                    android:text="DD/MM/YYYY"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/drop_down"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayoutDatePicker"
+                    app:layout_constraintTop_toTopOf="@id/constraintLayoutDatePicker"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutDatePicker"
+                    android:paddingStart="20sp"
+                    android:id="@+id/imageViewDatePicker"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select the DOB"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutDatePicker"
+            android:visibility="gone"
+            android:id="@+id/tvErrorDOB"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorDOB"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:hintTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Occupation"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutOccupation"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Address"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="District"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutDistrict"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraintLayoutState"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutState"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutState"
+                android:text="State:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvState"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tvState"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutState"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayoutState"
+                android:layout_marginLeft="20sp"
+                android:entries="@array/states_array"
+                android:paddingEnd="20sp"
+                android:paddingVertical="5sp"
+                android:contentDescription="Select State"
+                android:background="@drawable/rectangular_border"
+                android:id="@+id/spinnerState"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerState"
+                app:layout_constraintTop_toTopOf="@id/constraintLayoutState"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutState"
+                android:paddingStart="20sp"
+                android:id="@+id/imageViewState"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutBirthmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutState"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Birth Mark"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBirthmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textCapWords"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/disabilityRadioGroup"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutBirthmark"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disability"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/tvOfDisabilityRadioGroup"
+                />
+            <RadioButton
+                android:id="@+id/disabilityRadioGroupYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textSize="15sp"
+                />
+            <RadioButton
+                android:id="@+id/disabilityRadioGroupNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="15sp"
+                />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTypeOfDisability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/disabilityRadioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Type of disability"
+            app:hintTextColor="@color/black"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTypeOfDisability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:inputType="textMultiLine"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <CheckBox-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/layoutTypeOfDisability"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            android:layout_marginHorizontal="28sp"-->
+        <!--            android:paddingEnd="30sp"-->
+        <!--            android:paddingVertical="5sp"-->
+        <!--            android:text="I confirm that information provided is correct"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:id="@+id/cbIAgree"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_message"
+            android:textSize="20sp"
+            android:textColor="#ED0505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTypeOfDisability"
+            android:visibility="gone"
+            android:id="@+id/tvError"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            app:layout_constraintTop_toBottomOf="@id/tvError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cornerRadius="5sp"
+            android:id="@+id/btnSubmit"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

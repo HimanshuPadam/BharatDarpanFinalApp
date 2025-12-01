@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.loginFragments.ForgotFirstFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".1"
+        android:orientation="vertical"
+        android:id="@+id/guide_v_10"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset your password"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv2ndForgot"
+        />
+
+    <TextView
+        android:id="@+id/tvLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:text="______________________"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Email address"
+        android:textColor="@color/black"
+        android:paddingTop="15sp"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@id/tvLine"
+        app:layout_constraintStart_toStartOf="@id/guide_v_10"
+        android:id="@+id/tvEmail"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your e-mail address"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+        app:layout_constraintStart_toStartOf="@id/guide_v_10"
+        android:id="@+id/etEmail"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Link"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:backgroundTint="#b52b79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:id="@+id/btnOtp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

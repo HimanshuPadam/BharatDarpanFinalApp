@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fdfbf2"
+    android:scrollbars="horizontal|vertical"
+    tools:context=".fragments.deleteFragments.DeleteEntryFragment2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayout"
+        >
+
+        <TextView
+            android:id="@+id/tvNameQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Name"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvNameQues"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvHeadOfFamilyQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Head of Family"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNameQues"
+            />
+
+        <TextView
+            android:id="@+id/tvHeadOfFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvHeadOfFamilyQues"
+            app:layout_constraintTop_toBottomOf="@id/tvNameQues"
+            />
+
+        <TextView
+            android:id="@+id/tvRelationshipWithHeadQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Relationship with head"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeadOfFamilyQues"
+            />
+
+        <TextView
+            android:id="@+id/tvRelationshipWithHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvRelationshipWithHeadQues"
+            app:layout_constraintTop_toBottomOf="@id/tvHeadOfFamilyQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAadharNoQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Aadhar Number"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRelationshipWithHeadQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAadharNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvAadharNoQues"
+            app:layout_constraintTop_toBottomOf="@id/tvRelationshipWithHeadQues"
+            />
+
+        <TextView
+            android:id="@+id/tvGenderQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Gender"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAadharNoQues"
+            />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvGenderQues"
+            app:layout_constraintTop_toBottomOf="@id/tvAadharNoQues"
+            />
+
+        <TextView
+            android:id="@+id/tvReligionQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Religion"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFathersNameQues"
+            />
+
+        <TextView
+            android:id="@+id/tvReligion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvReligionQues"
+            app:layout_constraintTop_toBottomOf="@id/tvFathersNameQues"
+            />
+
+        <TextView
+            android:id="@+id/tvFathersNameQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Father's Name"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGenderQues"
+            />
+
+        <TextView
+            android:id="@+id/tvFathersName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvFathersNameQues"
+            app:layout_constraintTop_toBottomOf="@id/tvGenderQues"
+            />
+
+        <TextView
+            android:id="@+id/tvCasteQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Caste"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReligionQues"
+            />
+
+        <TextView
+            android:id="@+id/tvCaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvCasteQues"
+            app:layout_constraintTop_toBottomOf="@id/tvReligionQues"
+            />
+
+        <TextView
+            android:id="@+id/tvLiteracyStatusQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Literacy Status"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCasteQues"
+            />
+
+        <TextView
+            android:id="@+id/tvLiteracyStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvLiteracyStatusQues"
+            app:layout_constraintTop_toBottomOf="@id/tvCasteQues"
+            />
+
+        <TextView
+            android:id="@+id/tvLastClassStudiedQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Last class studied"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLiteracyStatusQues"
+            />
+
+        <TextView
+            android:id="@+id/tvLastClassStudied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvLastClassStudiedQues"
+            app:layout_constraintTop_toBottomOf="@id/tvLiteracyStatusQues"
+            />
+
+        <TextView
+            android:id="@+id/tvMaritalStatusQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Marital Status"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLastClassStudiedQues"
+            />
+
+        <TextView
+            android:id="@+id/tvMaritalStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvMaritalStatusQues"
+            app:layout_constraintTop_toBottomOf="@id/tvLastClassStudiedQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAgeAtMarriageQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Age at marriage"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMaritalStatusQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAgeAtMarriage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvAgeAtMarriageQues"
+            app:layout_constraintTop_toBottomOf="@id/tvMaritalStatusQues"
+            />
+
+        <TextView
+            android:id="@+id/tvMotherTongueQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Mother Tongue"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgeAtMarriageQues"
+            />
+
+        <TextView
+            android:id="@+id/tvMotherTongue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvMotherTongueQues"
+            app:layout_constraintTop_toBottomOf="@id/tvAgeAtMarriageQues"
+            />
+
+        <TextView
+            android:id="@+id/tvOtherLanguagesKnownQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Other languages known"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMotherTongueQues"
+            />
+
+        <TextView
+            android:id="@+id/tvOtherLanguagesKnown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvOtherLanguagesKnownQues"
+            app:layout_constraintTop_toBottomOf="@id/tvMotherTongueQues"
+            />
+
+        <TextView
+            android:id="@+id/tvDOBQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="DOB"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOtherLanguagesKnownQues"
+            />
+
+        <TextView
+            android:id="@+id/tvDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvDOBQues"
+            app:layout_constraintTop_toBottomOf="@id/tvOtherLanguagesKnownQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAgeQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Age"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDOBQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvAgeQues"
+            app:layout_constraintTop_toBottomOf="@id/tvDOBQues"
+            />
+
+        <TextView
+            android:id="@+id/tvOccupationQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Occupation"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgeQues"
+            />
+
+        <TextView
+            android:id="@+id/tvOccupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvOccupationQues"
+            app:layout_constraintTop_toBottomOf="@id/tvAgeQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAddressQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Address"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOccupationQues"
+            />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvAddressQues"
+            app:layout_constraintTop_toBottomOf="@id/tvOccupationQues"
+            />
+
+        <TextView
+            android:id="@+id/tvDistrictQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="District"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddressQues"
+            />
+
+        <TextView
+            android:id="@+id/tvDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvDistrictQues"
+            app:layout_constraintTop_toBottomOf="@id/tvAddressQues"
+            />
+
+        <TextView
+            android:id="@+id/tvStateQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="District"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDistrictQues"
+            />
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvStateQues"
+            app:layout_constraintTop_toBottomOf="@id/tvDistrictQues"
+            />
+
+        <TextView
+            android:id="@+id/tvBirthMarkQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Birth Mark"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStateQues"
+            />
+
+        <TextView
+            android:id="@+id/tvBirthMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvBirthMarkQues"
+            app:layout_constraintTop_toBottomOf="@id/tvStateQues"
+            />
+
+        <TextView
+            android:id="@+id/tvDisabilityQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Disability"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBirthMarkQues"
+            />
+
+        <TextView
+            android:id="@+id/tvDisability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvDisabilityQues"
+            app:layout_constraintTop_toBottomOf="@id/tvBirthMarkQues"
+            />
+
+        <TextView
+            android:id="@+id/tvTypeOfDisabilityQues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="Type of Disability"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDisabilityQues"
+            />
+
+        <TextView
+            android:id="@+id/tvTypeOfDisability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="30sp"
+            android:paddingVertical="20sp"
+            android:text="hgfhgfhgfh"
+            android:textSize="20sp"
+            android:textStyle="italic|normal"
+            app:layout_constraintStart_toEndOf="@id/tvTypeOfDisabilityQues"
+            app:layout_constraintTop_toBottomOf="@id/tvDisabilityQues"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:layout_constraintTop_toBottomOf="@id/tvTypeOfDisabilityQues"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cornerRadius="20sp"
+            android:id="@+id/btnDelete"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

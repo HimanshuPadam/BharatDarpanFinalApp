@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.navigationFragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutIntroduction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutNewEntry"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutPopulationDetails"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/census_logo"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Introduction to Census"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"
+                android:id="@+id/tvIntro"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutNewEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutIntroduction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutPopulationDetails"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/new_entry"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="New Entry"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSexRatio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutDeleteEntry"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutUpdateDetails"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutCasteWiseDetails"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/sex_ratio"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Sex Ratio"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutUpdateDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutPopulationDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutIntroduction"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutDeleteEntry"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/update_details"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:text="Update Details"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDeleteEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutSexRatio"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutPopulationDetails"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutReligionWiseDetails"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_delete"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Delete Entry"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPopulationDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutUpdateDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutIntroduction"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutDeleteEntry"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/population_details"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:text="Population Details"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutReligionWiseDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutCasteWiseDetails"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutDeleteEntry"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutMaritalStatus"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/religion"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:text="Religion-wise Details"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCasteWiseDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutReligionWiseDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutDeleteEntry"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutMaritalStatus"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/caste"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Caste-wise Details"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutMaritalStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutDisabilityList"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutReligionWiseDetails"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutAdultPopulation"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/marital_status"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Marital Status"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDisabilityList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutMaritalStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutCasteWiseDetails"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutLiteracyRate"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/disability"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Disability List"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAdultPopulation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutLiteracyRate"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutMaritalStatus"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutAadharDetails"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/adult"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Adult Population"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLiteracyRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutAdultPopulation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutDisabilityList"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutGovtOfIndia"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/literacy"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:text="Literacy Rates"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAadharDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutGovtOfIndia"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutAdultPopulation"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutNewEntryChild"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/aadhar"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Aadhar Details"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGovtOfIndia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutAadharDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutLiteracyRate"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutPopulationDetailsChild"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/govt_of_india"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:text="Govt. of India"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutNewEntryChild"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayoutPopulationDetailsChild"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutAadharDetails"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/child"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="New Entry(Child)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPopulationDetailsChild"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangular_border"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutAadharDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutGovtOfIndia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pop_details_child"
+                android:layout_gravity="center"
+                android:paddingTop="10sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="@color/black"
+                android:text="Population Details(Child)"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:paddingStart="30sp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

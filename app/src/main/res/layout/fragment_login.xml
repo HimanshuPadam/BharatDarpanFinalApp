@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.loginFragments.LoginFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".1"
+        android:orientation="vertical"
+        android:id="@+id/guide_v_10"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to Your Account"
+        android:textSize="30sp"
+        android:textColor="#EF5E1A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tvLogin"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvLine"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="5sp"-->
+<!--        android:text="______________________"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=" E-mail address"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="25sp"-->
+<!--        android:paddingTop="10sp"-->
+<!--        android:textStyle="normal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tvLine"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guide_v_10"-->
+<!--        android:id="@+id/tvUsername"-->
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Enter your e-mail"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="#808080"-->
+<!--        android:inputType="text"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvUsername"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guide_v_10"-->
+<!--        android:id="@+id/etUsername"-->
+<!--        />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="10sp"
+        >
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        app:passwordToggleEnabled="true">-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=" Password"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:paddingTop="15sp"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="normal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/etUsername"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guide_v_10"-->
+<!--        android:id="@+id/tvPassword"-->
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Enter your password"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="#808080"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:textSize="20sp"-->
+<!--        app:passwordToggleEnabled="true"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvPassword"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guide_v_10"-->
+<!--        android:id="@+id/etPassword"-->
+<!--        />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="10sp"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot your Password?"
+        android:clickable="true"
+        android:textSize="16sp"
+        android:padding="10sp"
+        android:paddingTop="10sp"
+        android:textColor="#72acaa"
+        android:layout_marginVertical="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        android:id="@+id/tvForgot"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        app:cornerRadius="5sp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:backgroundTint="#030649"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvForgot"
+        android:id="@+id/btnLogin"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

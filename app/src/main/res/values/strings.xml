@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Bharat Darpan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_otp">We have sent a confirmation code to your email.\nPlease check and enter the 4-digit code below.</string>
+    <string name="disability_text">If disable,then specify the type of disability</string>
+    <string name="conDesImage">loading...</string>
+    <string name="error_message">Error! Please fill all the fields.</string>
+    <string-array name="religion_array">
+        <item>--Select--</item>
+        <item name="hindu">Hindu</item>
+        <item name="sikh">Sikh</item>
+        <item name="muslim">Muslim</item>
+        <item name="christian">Christian</item>
+        <item name="jainism">Jainism</item>
+        <item name="buddhism">Buddhism</item>
+    </string-array>
+    <string-array name="castes_array">
+        <item>--Select--</item>
+        <item name="general">General</item>
+        <item name="obc">OBC</item>
+        <item name="bc">BC</item>
+        <item name="sc">SC</item>
+        <item name="st">ST</item>
+    </string-array>
+    <string-array name="marital_status_array">
+        <item>--Select--</item>
+        <item name="unmarried">Unmarried</item>
+        <item name="married">Married</item>
+        <item name="widow">Widow/Widower</item>
+        <item name="divorced">Divorced</item>
+        <item name="separated">Separated</item>
+    </string-array>
+
+    <string-array name="states_array">
+        <item>--Select--</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+</resources>

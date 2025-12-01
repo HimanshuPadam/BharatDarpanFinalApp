@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "88437168542",
+    "project_id": "bhartiye-census",
+    "storage_bucket": "bhartiye-census.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88437168542:android:b04f89c27b44e0eb501e8f",
+        "android_client_info": {
+          "package_name": "com.example.bhartiye_jangannah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpN378D3e6ONV8l2IAHY3EOQg03NS3ua4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

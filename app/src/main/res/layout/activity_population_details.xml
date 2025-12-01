@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.homeActivities.PopulationDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardBackgroundColor="#fdfbf2"
+            android:id="@+id/card"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/card"
+            app:layout_constraintStart_toEndOf="@id/igCensus"
+            app:layout_constraintBottom_toBottomOf="@id/card"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Population Details"
+            android:textAlignment="center"
+            android:scrollHorizontally="false"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:elevation="20sp"
+            android:id="@+id/tvCensus"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:elevation="20sp"
+            android:src="@drawable/population_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvCensus"
+            app:layout_constraintTop_toTopOf="@id/card"
+            app:layout_constraintBottom_toBottomOf="@id/card"
+            android:id="@+id/igCensus"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <!--For both linear layouts,i.e., columns and recyclerView-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--for columns-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rectangular_border"
+                >
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Name" />
+
+                <TextView
+                    android:id="@+id/tvHeadOfFamily"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Head of family" />
+
+                <TextView
+                    android:id="@+id/tvRelationshipWithHead"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Relationship with head" />
+
+                <TextView
+                    android:id="@+id/tvAadharNo"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Aadhar Number" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Gender" />
+
+                <TextView
+                    android:id="@+id/tvFathersName"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Father's name" />
+
+                <TextView
+                    android:id="@+id/tvReligion"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Religion" />
+
+                <TextView
+                    android:id="@+id/tvCaste"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Caste" />
+
+                <TextView
+                    android:id="@+id/tvLiteracyStatus"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Literacy Status" />
+
+                <TextView
+                    android:id="@+id/tvLastClassStudied"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Last Class Studied" />
+
+                <TextView
+                    android:id="@+id/tvMaritalStatus"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Marital Status" />
+
+                <TextView
+                    android:id="@+id/tvAgeAtMarriage"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Age at marriage" />
+
+                <TextView
+                    android:id="@+id/tvMotherTongue"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Mother Tongue" />
+
+                <TextView
+                    android:id="@+id/tvOtherLanguagesKnown"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Other languages known" />
+
+                <TextView
+                    android:id="@+id/tvDOB"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Date of birth" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Age" />
+
+                <TextView
+                    android:id="@+id/tvOccupation"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Occupation" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/tvDistrict"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="District" />
+
+                <TextView
+                    android:id="@+id/tvState"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="State" />
+
+                <TextView
+                    android:id="@+id/tvBirthMark"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Birth Mark" />
+
+                <TextView
+                    android:id="@+id/tvDisability"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Disability" />
+
+                <TextView
+                    android:id="@+id/tvTypeOfDisability"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Type of disability" />
+
+                <TextView
+                    android:id="@+id/tvImage"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Image" />
+
+
+            </LinearLayout>
+
+            <!--for recycler view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
