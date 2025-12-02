@@ -48,20 +48,27 @@ import java.util.concurrent.TimeUnit
 class NewEntryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewEntryBinding
     private lateinit var storedVerificationId: String
+    lateinit var forceResendingToken : PhoneAuthProvider.ForceResendingToken
+    var mAuth = FirebaseAuth.getInstance()
 
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-            // Auto verification (optional)
+            binding.layoutOTP.visibility = View.GONE
+            binding.btnVerify.visibility = View.GONE
+            binding.tvVerify.text = "Verified"
+            binding.tvVerify.visibility = View.VISIBLE
+            binding.tvVerify.isClickable = false
         }
 
         override fun onVerificationFailed(e: FirebaseException) {
-            Toast.makeText(this@NewEntryActivity, e.message, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@NewEntryActivity, "Otp verification failed ${e.message}", Toast.LENGTH_SHORT).show()
         }
 
         override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
             storedVerificationId = verificationId
-            Toast.makeText(this@NewEntryActivity, "OTP Sent", Toast.LENGTH_SHORT).show()
+            forceResendingToken = token
+            Toast.makeText(this@NewEntryActivity, "OTP Sent Successfully", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -432,12 +439,6 @@ class NewEntryActivity : AppCompatActivity() {
         binding.btnVerify.setOnClickListener{
             val otp = binding.etOtp.text.toString()
             verifyOTP(otp)
-
-            binding.layoutOTP.visibility = View.GONE
-            binding.btnVerify.visibility = View.GONE
-            binding.tvVerify.text = "Verified"
-            binding.tvVerify.visibility = View.VISIBLE
-            binding.tvVerify.isClickable = false
         }
         binding.btnSubmit.setOnClickListener {
             //to get the aadhar number in single variable
@@ -850,7 +851,7 @@ class NewEntryActivity : AppCompatActivity() {
     private fun sendOTP(phone: String) {
 
         val options = PhoneAuthOptions.newBuilder(auth)
-            .setPhoneNumber("+91$phone")
+            .setPhoneNumber(phone)
             .setTimeout(60L, TimeUnit.SECONDS)
             .setActivity(this)
             .setCallbacks(callbacks)
